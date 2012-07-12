@@ -1,0 +1,11 @@
+<%= l(:mail_body_wiki_content_updated, :id => h(@wiki_content.page.pretty_title),
+                                       :author => h(@wiki_content.author)) %>
+<%= @wiki_content.comments %>
+
+<%= @wiki_content.page.pretty_title %>:
+<%= @wiki_content_url %>
+
+<%= "Have a nice day." if @wiki_content.author.is_vip -%>
+
+<%= l(:label_view_diff) %>:
+<%= @wiki_diff_url %>
